@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Salma Adel — UI/UX Designer portfolio. Crafting intuitive, accessible digital experiences from research to pixel-perfect prototypes.">
+  <meta name="keywords" content="UI/UX Designer, Salma Adel, portfolio, user experience, interface design">
+  <meta name="author" content="Salma Adel">
+  <title>Salma Adel | UI/UX Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">Salma<span>.</span></a>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#home" class="nav__link active">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#education" class="nav__link">Education</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#feedbacks" class="nav__link">Feedbacks</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero section" id="home">
+      <div class="hero__bg"></div>
+      <div class="gradient-mesh" aria-hidden="true"></div>
+      <div class="floating-shapes" aria-hidden="true">
+        <div class="shape shape--1"></div>
+        <div class="shape shape--2"></div>
+        <div class="shape shape--3"></div>
+        <div class="shape shape--4"></div>
+      </div>
+      <div class="container hero__container">
+        <div class="hero__content reveal-left" data-delay="0">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__name shimmer-text">Salma Adel</h1>
+          <h2 class="hero__title">
+            <span id="typingText"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero__bio">
+            I'm Salma Adel, a UI/UX designer obsessed with solving real user problems through thoughtful design. From research to pixel-perfect prototypes, I create interfaces that are intuitive, accessible, and a pleasure to use. My work is driven by curiosity, empathy, and a relentless pursuit of simplicity.
+          </p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--outline">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero__image reveal-right" data-delay="200">
+          <div class="hero__image-wrapper">
+            <div class="hero__image-placeholder">
+              <img src="assets/salma profile.jpeg" alt="Salma Adel" class="hero__profile-image">
+            </div>
+            <div class="hero__image-ring icon-spin-slow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section">
+      <div class="container stats__grid">
+        <div class="stat-card reveal-scale animated-border" data-delay="0">
+          <span class="stat-card__number" data-target="3">0</span>
+          <span class="stat-card__label">Years Experience</span>
+        </div>
+        <div class="stat-card reveal-scale animated-border" data-delay="100">
+          <span class="stat-card__number" data-target="25">0</span>
+          <span class="stat-card__label">Projects Completed</span>
+        </div>
+        <div class="stat-card reveal-scale animated-border" data-delay="200">
+          <span class="stat-card__number" data-target="15">0</span>
+          <span class="stat-card__label">Happy Clients</span>
+        </div>
+        <div class="stat-card reveal-scale animated-border" data-delay="300">
+          <span class="stat-card__number" data-target="4">0</span>
+          <span class="stat-card__label">Design Tools</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section__header reveal" data-delay="0">
+          <span class="section__tag">About Me</span>
+          <h2 class="section__title">Who I Am</h2>
+        </div>
+        <div class="about__card reveal animated-border" data-delay="150">
+          <div class="about__icon icon-bounce"><i class="fas fa-palette"></i></div>
+          <p class="about__text">
+            I'm Salma Adel, a UI/UX designer with a passion for crafting digital experiences that are as intuitive as they are visually captivating. I believe great design starts with empathy — understanding user needs, behaviors, and pain points to create solutions that truly resonate. From user research to high-fidelity prototyping, I bring ideas to life with a focus on clarity, consistency, and accessibility. My work is driven by a curiosity to simplify the complex and make technology feel more human. Whether it's a mobile app or a web platform, I design with purpose, ensuring every interaction leaves a lasting positive impression.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="education section" id="education">
+      <div class="container">
+        <div class="section__header reveal" data-delay="0">
+          <span class="section__tag">Education</span>
+          <h2 class="section__title">Academic Background</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline__item reveal-left animated-border" data-delay="100">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__icon icon-bounce"><i class="fas fa-graduation-cap"></i></div>
+              <h3 class="timeline__title">Faculty of Arts</h3>
+              <p class="timeline__subtitle">English Section</p>
+              <span class="timeline__badge">Degree: Very Good</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <div class="container">
+        <div class="section__header reveal" data-delay="0">
+          <span class="section__tag">Skills</span>
+          <h2 class="section__title">What I Do Best</h2>
+        </div>
+        <div class="skills__grid">
+          <div class="skill-card reveal-scale animated-border" data-delay="0">
+            <div class="skill-card__header">
+              <i class="fas fa-search icon-pulse"></i>
+              <h3>User Research &amp; Persona Development</h3>
+            </div>
+            <div class="skill-card__bar"><div class="skill-card__progress" data-progress="92"></div></div>
+            <span class="skill-card__percent">92%</span>
+          </div>
+          <div class="skill-card reveal-scale animated-border" data-delay="100">
+            <div class="skill-card__header">
+              <i class="fas fa-pencil-ruler icon-pulse"></i>
+              <h3>Wireframing &amp; Prototyping</h3>
+            </div>
+            <div class="skill-card__bar"><div class="skill-card__progress" data-progress="95"></div></div>
+            <span class="skill-card__percent">95%</span>
+          </div>
+          <div class="skill-card reveal-scale animated-border" data-delay="200">
+            <div class="skill-card__header">
+              <i class="fas fa-paint-brush icon-pulse"></i>
+              <h3>User Interface &amp; Visual Design</h3>
+            </div>
+            <div class="skill-card__bar"><div class="skill-card__progress" data-progress="90"></div></div>
+            <span class="skill-card__percent">90%</span>
+          </div>
+          <div class="skill-card reveal-scale animated-border" data-delay="300">
+            <div class="skill-card__header">
+              <i class="fas fa-layer-group icon-pulse"></i>
+              <h3>Figma / Adobe XD</h3>
+            </div>
+            <div class="skill-card__bar"><div class="skill-card__progress" data-progress="88"></div></div>
+            <span class="skill-card__percent">88%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section__header reveal" data-delay="0">
+          <span class="section__tag">Portfolio</span>
+          <h2 class="section__title">Featured Projects</h2>
+        </div>
+        <div class="projects__grid">
+          <article class="project-card reveal-left animated-border" data-delay="0">
+            <div class="project-card__image">
+              <div class="project-card__placeholder"><i class="fas fa-mobile-alt"></i></div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Swapify</h3>
+              <p class="project-card__desc">A modern UI/UX design project focused on creating an intuitive user experience with clean interfaces and seamless user flows.</p>
+              <a href="https://www.figma.com/design/ucYNnutIiIrArBf94qf2gU/swapify?node-id=31-2&t=HnrB3Yze9vSmiftk-0" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">View Project <i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </article>
+          <article class="project-card reveal-right animated-border" data-delay="150">
+            <div class="project-card__image">
+              <div class="project-card__placeholder project-card__placeholder--alt"><i class="fas fa-desktop"></i></div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Creative Design Showcase</h3>
+              <p class="project-card__desc">A creative design project showcasing user-centered design principles, wireframes, prototypes, and visual design solutions.</p>
+              <a href="https://drive.google.com/file/d/1Q7DoUrpLOOu-7blHHyxTK17dFLzHcSw4/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">View Project <i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedbacks section" id="feedbacks">
+      <div class="container">
+        <div class="section__header reveal" data-delay="0">
+          <span class="section__tag">Testimonials</span>
+          <h2 class="section__title">Client Feedbacks</h2>
+        </div>
+        <div class="carousel reveal-scale animated-border" data-delay="100">
+          <div class="carousel__track" id="carouselTrack">
+            <div class="carousel__slide">
+              <div class="testimonial">
+                <div class="testimonial__avatar"><i class="fas fa-user"></i></div>
+                <div class="testimonial__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="testimonial__text">"Salma was an absolute pleasure to work with. She took the time to understand our brand vision and user needs from day one. Her communication was clear throughout the process, and she delivered everything on time. We couldn't be happier with the final result!"</p>
+                <h4 class="testimonial__name">Sarah Mitchell</h4>
+                <span class="testimonial__role">Brand Manager</span>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="testimonial">
+                <div class="testimonial__avatar"><i class="fas fa-user"></i></div>
+                <div class="testimonial__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="testimonial__text">"Working with Salma was a game-changer for our product. She brought fresh, creative ideas to the table and transformed our rough concept into a stunning, user-friendly interface. Her attention to detail and aesthetic sense truly set her apart."</p>
+                <h4 class="testimonial__name">James Carter</h4>
+                <span class="testimonial__role">Product Lead</span>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="testimonial">
+                <div class="testimonial__avatar"><i class="fas fa-user"></i></div>
+                <div class="testimonial__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="testimonial__text">"Salma has a rare ability to simplify complex problems into elegant design solutions. She conducted thorough user research and created a seamless experience that our customers absolutely love. Our engagement metrics improved significantly after the redesign!"</p>
+                <h4 class="testimonial__name">Emily Rodriguez</h4>
+                <span class="testimonial__role">Startup Founder</span>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="testimonial">
+                <div class="testimonial__avatar"><i class="fas fa-user"></i></div>
+                <div class="testimonial__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="testimonial__text">"What I appreciated most about Salma was her openness to feedback and her collaborative spirit. She iterated on designs until we got it just right, always bringing her expertise while respecting our input. A true team player!"</p>
+                <h4 class="testimonial__name">David Kim</h4>
+                <span class="testimonial__role">Tech Director</span>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="testimonial">
+                <div class="testimonial__avatar"><i class="fas fa-user"></i></div>
+                <div class="testimonial__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="testimonial__text">"Salma's designs didn't just look beautiful — they delivered real results. The new interface she created increased our conversion rate and made our platform so much easier to navigate. Highly recommend her for any UX/UI project!"</p>
+                <h4 class="testimonial__name">Lisa Thompson</h4>
+                <span class="testimonial__role">Marketing Head</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" id="carouselPrev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel__dots" id="carouselDots"></div>
+            <button class="carousel__btn" id="carouselNext" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section__header reveal" data-delay="0">
+          <span class="section__tag">Services</span>
+          <h2 class="section__title">What I Offer</h2>
+        </div>
+        <div class="services__grid">
+          <div class="service-card reveal-scale animated-border" data-delay="0">
+            <div class="service-card__icon"><i class="fas fa-users"></i></div>
+            <h3 class="service-card__title">User Research &amp; Discovery</h3>
+            <p class="service-card__desc">Conducting user interviews, surveys, and competitor analysis to understand user needs, pain points, and market trends.</p>
+          </div>
+          <div class="service-card reveal-scale animated-border" data-delay="80">
+            <div class="service-card__icon"><i class="fas fa-sitemap"></i></div>
+            <h3 class="service-card__title">Wireframing &amp; Prototyping</h3>
+            <p class="service-card__desc">Creating low-fidelity wireframes and interactive high-fidelity prototypes to visualize user flows and test concepts.</p>
+          </div>
+          <div class="service-card reveal-scale animated-border" data-delay="160">
+            <div class="service-card__icon"><i class="fas fa-swatchbook"></i></div>
+            <h3 class="service-card__title">UI Design &amp; Visual Branding</h3>
+            <p class="service-card__desc">Designing visually stunning interfaces with strong typography, color theory, and brand consistency.</p>
+          </div>
+          <div class="service-card reveal-scale animated-border" data-delay="240">
+            <div class="service-card__icon"><i class="fas fa-vial"></i></div>
+            <h3 class="service-card__title">Usability Testing &amp; Iteration</h3>
+            <p class="service-card__desc">Conducting usability tests to gather feedback and refine designs for better user experiences.</p>
+          </div>
+          <div class="service-card reveal-scale animated-border" data-delay="320">
+            <div class="service-card__icon"><i class="fas fa-cubes"></i></div>
+            <h3 class="service-card__title">Design Systems &amp; Style Guides</h3>
+            <p class="service-card__desc">Building scalable design systems, component libraries, and style guides for consistency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section__header reveal" data-delay="0">
+          <span class="section__tag">Get In Touch</span>
+          <h2 class="section__title">Contact Me</h2>
+        </div>
+        <div class="contact__grid">
+          <div class="contact-card reveal-scale animated-border" data-delay="0">
+            <div class="contact-card__icon icon-bounce"><i class="fas fa-envelope"></i></div>
+            <h3>Email</h3>
+            <p id="emailText">salmaadelmohamed24@gmail.com</p>
+            <button class="btn btn--outline btn--sm" id="copyEmail"><i class="fas fa-copy"></i> Copy Email</button>
+          </div>
+          <div class="contact-card reveal-scale animated-border" data-delay="100">
+            <div class="contact-card__icon icon-bounce"><i class="fab fa-whatsapp"></i></div>
+            <h3>WhatsApp</h3>
+            <p>Chat with me directly</p>
+            <a href="https://wa.me/0000000000" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm"><i class="fab fa-whatsapp"></i> Message Me</a>
+          </div>
+          <div class="contact-card reveal-scale animated-border" data-delay="200">
+            <div class="contact-card__icon icon-bounce"><i class="fas fa-share-alt"></i></div>
+            <h3>Social Media</h3>
+            <p>Connect with me online</p>
+            <div class="contact-card__social">
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+              <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; 2025 Salma Adel. All rights reserved.</p>
+      <p class="footer__tagline">Designed with <i class="fas fa-heart"></i> and empathy</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage">Email copied!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
